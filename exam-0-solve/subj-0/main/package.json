@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "backstop": "^1.0.1"
+  },
+  "scripts":{
+  	"test": "backstop test"
+  }
+}

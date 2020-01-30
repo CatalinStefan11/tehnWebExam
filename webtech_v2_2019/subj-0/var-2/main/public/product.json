@@ -1,0 +1,23 @@
+{
+    "name": "beirut",
+    "description": "maxumovic is gay",
+    "sizes": [
+        1,
+        2,
+        3
+    ],
+    "inventory": [
+        {
+            "supplierName": "APPLE",
+            "quantity": 100,
+            "aquisitionPrice": 10000
+        },
+        {
+            "supplierName": "samsung",
+            "quantity": 100,
+            "aquisitionPrice": 10000
+        }
+    ]
+}
+
+

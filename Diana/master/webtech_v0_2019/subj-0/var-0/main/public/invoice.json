@@ -1,0 +1,17 @@
+{
+    "invoiceNumber":1,
+    "invoiceSeries":"serii",
+    "invoiceItems":[
+        {
+            "productName":"produs1",
+            "quantity":6,
+            "productPrice":15.99
+        },
+        {
+            "productName":"produs2",
+            "quantity":8,
+            "productPrice":10.99
+        }
+    ]
+    
+}

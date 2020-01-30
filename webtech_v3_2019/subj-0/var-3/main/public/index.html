@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <script type="text/javascript">
+            window.onload = async () => {
+                const url = 'http://localhost:8080/account.json';
+                let table = document.getElementById('jsonTable');
+                try{
+                    let response = await fetch(url);
+                    let json = await response.json();
+
+                    table.innerHTML = `
+                    <tr>
+                        <td>${json.accountHolder}</td>
+                    </tr>
+                    <tr>
+                        <td>${json.currentBalance}</td>
+                    </tr>
+                    <tr>
+                        <td>${json.iban}</td>
+                    </tr>
+                    <tr>
+                        <td>${json.currency}</td>
+                    </tr>
+                    `
+                }catch(err){
+                    console.warn(err);
+                }
+            }    
+            
+        </script>
+    </head>
+
+    <body>
+        <table id=jsonTable></table>
+    </body>
+</html>

@@ -1,0 +1,3 @@
+Din pacate nu toate testele merg momentan, dar ar trebui sa implementati formularul astfel incat sa se adauge un element la lista cand se da click pe buton.
+
+Puteți rula testele cu "npm test" în directorul main.

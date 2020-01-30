@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript">
+            window.onload  = async () => {
+                const uri = 'http://localhost:8080/product.json';
+                let table = document.getElementById('jsonTable');
+                try{
+                    let response = await fetch(uri);
+                    let json = await response.json();
+                    
+                    table.innerHTML = `
+                    <tr>
+                        <td>${json.name}</td>
+                    </tr>
+                    <tr>
+                        <td>${json.description}</td>
+                    </tr>
+                    `
+                }catch(err){
+                    console.warn(err)
+                }
+            }   
+        </script>
+    </head>
+
+    <body>
+        <table id=jsonTable></table>
+    </body>
+</html>

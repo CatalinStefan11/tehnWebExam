@@ -1,0 +1,20 @@
+{
+    "accountHolder":"Catalin",
+    "currentBalance":1000,
+    "iban":"1000-1000-1000-1000",
+    "currency":"euro",
+    "transactions": [
+        {
+            "amount":100,
+            "transactionType":"deposit",
+            "beneficiaryName":"Catalin",
+            "approved":true
+        },
+        {
+            "amount":200,
+            "transactionType":"withdraw",
+            "beneficiaryName":"Catalin",
+            "approved":false
+        }
+    ]
+}

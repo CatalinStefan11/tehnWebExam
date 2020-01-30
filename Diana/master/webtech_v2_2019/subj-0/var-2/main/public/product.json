@@ -1,0 +1,15 @@
+{
+    "name": "produs nr 1",
+    "description":"acesta este primul produs",
+    "sizes":[1,2,3],
+    "inventory":[{
+        "supplierName":"Diana",
+        "quantity":10,
+        "aquisitionPrice":99.99
+    },
+    {
+       "supplierName":"Mara",
+        "quantity":3,
+        "aquisitionPrice":199.99 
+    }]
+}

@@ -1,0 +1,20 @@
+*{
+	border : 1px solid black;
+	box-sizing: border-box;
+}
+
+body{
+}
+
+#main{
+	display : grid;
+}
+
+#menu{
+}
+
+#sidebar{
+}
+
+#content{
+}

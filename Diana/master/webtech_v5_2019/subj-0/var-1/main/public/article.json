@@ -1,0 +1,14 @@
+{
+    "title":"articol",
+    "abstract":"abstract",
+    "keywords":["a","b","c"],
+    "authors": [{
+        "fullName":"Ronald Duck",
+        "institution": "Oxford",
+        "email":"author1@email.com"
+    },{
+        "fullName":"Gotwin Savgh",
+        "institution": "Manchester",
+        "email":"author2@email.com"
+    }]
+}

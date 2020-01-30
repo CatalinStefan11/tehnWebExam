@@ -1,0 +1,15 @@
+{
+    "name":"Diana",
+    "year":3,
+    "credits":150,
+    "superpowers":["beauty","intelligence","modesty"],
+    "grades":[{
+        "class": "tehnweb",
+        "homeworkSubmitted":true,
+        "examGrade":10
+    },{
+        "class": "android",
+        "homeworkSubmitted":true,
+        "examGrade":10
+    }]
+}

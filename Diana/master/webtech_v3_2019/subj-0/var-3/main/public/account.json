@@ -1,0 +1,17 @@
+{
+    "accountHolder":"Diana",
+    "currentBalance":2000,
+    "iban":"brd377228",
+    "currency":"euro",
+    "transactions":[{
+        "amount":100,
+        "transactionType":"type1",
+        "beneficiaryName":"stradivarius",
+        "approved":true
+    },{
+        "amount":10,
+        "transactionType":"type2",
+        "beneficiaryName":"mega",
+        "approved":true
+    }]
+}

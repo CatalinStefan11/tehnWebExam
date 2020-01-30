@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="divjson"></div>
+    </body>
+    <script type="text/javascript">
+        
+        var showJson=(json)=>{
+            var out='<p> Student: '+ json.name+', year: ' + json.year + ', credits: ' + json.credits+ '</p>' +
+            '<p> superpowers: ';
+            for(let i of json.superpowers)
+                out+=i + '; ';
+            out+='</p>';
+            
+            for (let i of json.grades)
+                out+= '<p> Class: '+ i.class + ". Exam grade: " + i.examGrade+'</p>'
+                
+            document.getElementById("divjson").innerHTML=out;
+        }
+        
+        var xmlhttp=new XMLHttpRequest(); 
+        xmlhttp.overrideMimeType("application/json");
+        xmlhttp.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200)
+            {
+                var myJson=JSON.parse(this.responseText);
+                showJson(myJson);
+            }
+        }
+        xmlhttp.open('GET', 'student.json', true);
+        xmlhttp.send();
+        
+        
+    </script>
+</html>

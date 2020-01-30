@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="divjson"></div>
+    </body>
+    <script type="text/javascript">
+        
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.overrideMimeType("application/json");
+        xmlhttp.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200){
+                var myJson=JSON.parse(this.responseText);
+                showJson(myJson);
+            }
+        }
+        xmlhttp.open('GET','account.json',true);
+        xmlhttp.send();
+        
+        var showJson=(json)=>{ 
+            var out='<p> Account Holder: ' + json.accountHolder + '</p>' +
+            '<p> currentBalance: ' + json.currentBalance + '</p>' + '<p> Transactions: ';
+            for(let i of json.transactions)
+                out+=i.amount + ';';
+                
+            out+='</p>';
+            document.getElementById("divjson").innerHTML=out;
+        }
+        
+    </script>
+</html>

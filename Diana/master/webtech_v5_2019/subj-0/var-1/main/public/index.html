@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="divjson"></div>
+    </body>
+    <script type="text/javascript">
+        
+        var showJson=(json)=>{
+            var out='<p> Articol: '+json.title +', abstract: '+json.abstract + 'keywords: ';
+            for(let i of json.keywords)
+                out+=i +'; ';
+                
+            out+='</p>';
+            out+='<p>Authors:</p>'
+            for(let author of json.authors)
+                out+='<p> Name: ' + author.fullName + ', institution: ' + author.institution + ', email: ' + author.email + '</p>';
+            document.getElementById("divjson").innerHTML=out;
+        }
+        
+        var xmlhttp=new XMLHttpRequest();
+        xmlhttp.overrideMimeType("application/json");
+        xmlhttp.onreadystatechange=function(){
+            if(this.readyState==4 && this.status==200)
+                {
+                    var myJson=JSON.parse(this.responseText);
+                    showJson(myJson);
+                }
+        }
+        xmlhttp.open('GET','article.json',true);
+        xmlhttp.send();
+        
+    </script>
+</html>

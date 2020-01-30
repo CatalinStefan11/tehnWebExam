@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <div id="id01"></div>
+    </body>
+    <script>
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.overrideMimeType("application/json");
+    var url = 'invoice.json';
+
+    xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var myJson = JSON.parse(this.responseText);
+        myFunction(myJson);
+    }
+};
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+
+function myFunction(arr) {
+    var out = '<p> Invoice number: ' + arr.invoiceNumber + '</p>' +
+    '<p> Invoice series: ' + arr.invoiceSeries + '</p>' +
+    '<p> Invoice Items:';
+    for(var i=0;i<arr.invoiceItems.length;i++)
+        out+=arr.invoiceItems[i].productName+';';
+    out+='</p>';
+    console.log(arr);
+    document.getElementById("id01").innerHTML = out;
+}
+
+</script>
+</html>
+
+
